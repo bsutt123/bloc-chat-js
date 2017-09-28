@@ -4,6 +4,12 @@
         <button ng-click="home.openRoomModal()"> Create a New Room </button>
     </div>
     <ul class="room-list" ng-repeat="room in home.rooms">
-        <li class="room-item"> <p> {{ room.$value }}  </li>
+        <li class="room-item" ng-click="home.setActiveRoom(room)"> <p> {{ room.$value }}  </li>
     </ul>
+</div>
+
+<div class="chat-panel">
+    <div class='chat-box' ng-repeat="message in home.currentRoomMessages">
+        {{ message.content }}
+    </div>
 </div>

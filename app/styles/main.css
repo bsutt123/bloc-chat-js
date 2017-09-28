@@ -4,9 +4,16 @@
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: #E57373;
+    background-color: #F44336;
 }
 
 .room-item:hover {
     cursor: default;
+}
+
+.chat-panel {
+    position:relative;
+    left: 300px;
+
+    background-color: #EF9A9A;
 }
