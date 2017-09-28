@@ -1,0 +1,12 @@
+.side-panel {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #E57373;
+}
+
+.room-item:hover {
+    cursor: default;
+}
