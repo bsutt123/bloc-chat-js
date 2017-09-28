@@ -1,6 +1,7 @@
 <div class="side-panel">
     <div class="side-panel-heading">
         <h2> Room List </h2>
+        <button ng-click="home.openRoomModal()"> Create a New Room </button>
     </div>
     <ul class="room-list" ng-repeat="room in home.rooms">
         <li class="room-item"> <p> {{ room.$value }}  </li>

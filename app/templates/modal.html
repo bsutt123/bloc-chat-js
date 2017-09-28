@@ -1,0 +1,14 @@
+<section class="new-room-modal">
+    <div class="modal-header">
+        <h2> Enter your new room name </h2>
+    </div>
+    <form ng-submit="modal.closeModal(newRoomName)">
+        <div>
+            <input type="text" ng-model="newRoomName">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+            <button ng-click="modal.dismissModal()"> Cancel </button>
+        </div>
+    </form>
+</section>
