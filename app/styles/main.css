@@ -1,10 +1,70 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --color-primary: #f44336;
+    --color-primary-light: #ff7961;
+    --color-primary-dark: #ba000d;
+
+    --color-white: #FFFFFF;
+    --color-black: #222222;
+}
+
+html {
+    font-size: 62.5%;
+}
+.side-panel-heading{
+    text-align: center;
+}
 .side-panel {
-    width: 300px;
-    position: absolute;
+    position:absolute;
+    width: 20%;
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: #E57373;
+    background-color: var(--color-primary-light);
+}
+
+.new-room-button {
+    font-size: 1.6rem;
+    border: 0;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: .5rem;
+    margin-bottom:2rem;
+    transition: all .2s;
+}
+
+.new-room-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+}
+
+.new-room-button:active{
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);
+}
+
+.room-list {
+    list-style: none;
+    margin-left: 4rem;
+}
+.room-item {
+    font-size: 1.6rem;
+    transition: all .1s;
+}
+
+.room-item:hover{
+    transform: scale(1.05) translateX(5px);
+}
+
+.room-item:not(:last-child) {
+    margin-bottom: 1rem;
 }
 
 .room-item:hover {
