@@ -27,6 +27,10 @@
             console.log(self.currentRoomMessages)
 
         };
+
+        self.createNewMessage = function(message) {
+            console.log(message);
+        }
     };
     angular
         .module('blocChat')

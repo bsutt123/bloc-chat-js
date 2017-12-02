@@ -60,7 +60,7 @@ body {
 .chat-panel {
     position: absolute;
     top: 0; 
-    bottom: 0;
+    bottom: 10%;
     left: 20%;
     right: 0;
     background: var(--light-grey);
@@ -138,27 +138,32 @@ body {
 .modal-button-inputs {
     text-align: center;
 }
+
 .message-list{
     list-style: none;
     padding: 2rem;
 }
+
 .message-box {
     position: relative;
     width: 100%;
     background: var(--color-white);
     border-radius: 10px;
 }
+
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
+
 .message-creator {
     text-align: center;
     float: left;
     width: 15%;
     padding:1rem 0;
 }
+
 .message-content {
     float:left;
     padding:1rem;
@@ -166,9 +171,31 @@ body {
     border-right: 1px solid black;
     border-left: 1px solid black;
 }
+
 .message-time {
     text-align:center;
     float: left;
     width: 15%;
     padding:1rem 0;
+}
+
+.new-message-input-box {
+    position: absolute;
+    left:20%;
+    top: 90%;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+.new-message-input {
+    display: inline-block;
+    width: 75%;
+    font-size: 1.6rem;
+    height:100%;
+}
+
+.new-message-button {
+    display: inline-block;
+    width: 20%;
 }
