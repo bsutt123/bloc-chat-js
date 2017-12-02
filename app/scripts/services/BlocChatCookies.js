@@ -11,7 +11,6 @@
 
             modalInstance.result
                 .then( function(newUserName) {
-                    console.log("I made it to the then!");
                     $cookies.put('blocChatCurrentUser', newUserName); })
                 .catch( function(reason) {
                     console.log("Promise was reject because "+reason);

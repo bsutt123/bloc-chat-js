@@ -4,7 +4,17 @@
         self.rooms = Room.all;
         self.currentRoom = null;
         self.currentRoomName='';
+        self.newMessageInput='';
 
+        self.convertTime = function(time) {
+            const d = new Date(time);
+            const stringDate = d.toString();
+            if (stringDate === "Invalid Date") {
+                return ""
+            } else {
+                return stringDate;
+            }
+        }
         self.openRoomModal = function() {
 
             var modalInstance = $uibModal.open({
@@ -29,11 +39,27 @@
 
         };
 
-        self.createNewMessage = function(message) {
-            console.log(message);
+        self.createNewMessage = () => {
+            if (self.currentRoom === null) {
+                alert("You have to pick a room first!");
+            } else {
+                const newMessage = self.newMessageInput;
+                const currentUser = $cookies.get('blocChatCurrentUser');
+                const now = new Date;
+                const dateString = now.toDateString()
+                const messageObject = {
+                    content: newMessage,
+                    username: currentUser,
+                    time: dateString,
+                    roomID: self.currentRoom.$id
+                }
+                self.newMessageInput="";
+                Message.createNewMessage(messageObject);
+            }
+
         }
     };
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', 'Message',"$cookies", HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', 'Message','$cookies', HomeCtrl]);
 })();
