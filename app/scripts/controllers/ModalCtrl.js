@@ -1,18 +1,19 @@
 (function() {
-    function ModalCtrl(Room, $uibModalInstance) {
+    function ModalCtrl($uibModalInstance) {
         var self = this;
 
-        self.closeModal = function(newRoomName) {
-            console.log('The new room name will be '+newRoomName)
-            $uibModalInstance.close(newRoomName);
+        self.closeModal = function(input) {
+            if (input && input !== "") {
+                $uibModalInstance.close(input);
+            }
+  
         };
 
         self.dismissModal = function() {
-
             $uibModalInstance.dismiss();
         }
     }
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+        .controller('ModalCtrl', ['$uibModalInstance', ModalCtrl]);
 })();
