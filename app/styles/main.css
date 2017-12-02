@@ -24,6 +24,9 @@ body {
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
+.u-margin-bot-sm {
+    margin-bottom: 2rem;
+}
 .side-panel-heading{
     text-align: center;
 }
@@ -73,7 +76,6 @@ body {
     background: var(--color-primary-dark);
     color: var(--color-white);
     padding: 1rem;
-    margin-bottom:2rem;
     text-transform: uppercase;
     border-radius: 100px;
     transition: all .2s;
@@ -180,6 +182,7 @@ body {
 }
 
 .new-message-input-box {
+    background: var(--light-grey);
     position: absolute;
     left:20%;
     top: 90%;
@@ -190,12 +193,43 @@ body {
 
 .new-message-input {
     display: inline-block;
-    width: 75%;
+    margin: 0 auto;
+    float: left;
     font-size: 1.6rem;
-    height:100%;
+    width: 75%;
+    height: 100%;
+}
+
+.new-message-button-box {
+    position: relative;
+    float: left;
+    width: 25%;
+    height:100%
 }
 
 .new-message-button {
-    display: inline-block;
-    width: 20%;
+    position:absolute;
+    width: 95%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 300;
+    border: 0;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: 1rem;
+    text-transform: uppercase;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.new-message-button:hover{
+    transform: translate(-50%, -55%);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.4);
+}
+
+.new-message-button:active{
+    transform: translate(-50%, -51%);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.4);
 }
