@@ -1,19 +1,123 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --color-primary: #f44336;
+    --color-primary-light: #ff7961;
+    --color-primary-dark: #ba000d;
+
+    --color-white: #FFFFFF;
+    --color-black: #222222;
+    --light-grey: #DDDDDD;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.side-panel-heading{
+    text-align: center;
+}
+
+.heading-secondary {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+.heading-tertiary {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
 .side-panel {
-    width: 300px;
-    position: absolute;
+    position:absolute;
+    width: 20%;
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: #F44336;
+    background-color: var(--color-primary-light);
+}
+
+.button {
+    font-size: 1.5rem;
+    font-weight: 300;
+    border: 0;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: 1rem;
+    margin-bottom:2rem;
+    text-transform: uppercase;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+}
+
+.button:active{
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);
+}
+
+.room-list {
+    list-style: none;
+    margin-left: 4rem;
+}
+.room-item {
+    font-size: 1.6rem;
+    transition: all .1s;
+}
+
+.room-item:hover{
+    transform: scale(1.05) translateX(5px);
+}
+
+.room-item:not(:last-child) {
+    margin-bottom: 1rem;
 }
 
 .room-item:hover {
     cursor: default;
 }
 
-.chat-panel {
-    position:relative;
-    left: 300px;
+.new-room-modal {
+    background: var(--light-grey);
+}
 
-    background-color: #EF9A9A;
+.modal-header {
+    text-align: center
+}
+
+.new-room-input-box {
+    text-align: center;
+}
+
+.new-room-input {
+    width: 80%;
+    margin: 1rem auto;
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    transition: all .2s;
+}
+
+.new-room-input:focus {
+    transform: scale(1.1) translateY(-2px);
+}
+
+.modal-button-inputs {
+    text-align: center;
 }

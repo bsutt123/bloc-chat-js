@@ -1,15 +1,13 @@
-<div class="side-panel">
-    <div class="side-panel-heading">
-        <h2> Room List </h2>
-        <button ng-click="home.openRoomModal()"> Create a New Room </button>
-    </div>
-    <ul class="room-list" ng-repeat="room in home.rooms">
-        <li class="room-item" ng-click="home.setActiveRoom(room)"> <p> {{ room.$value }}  </li>
-    </ul>
-</div>
 
-<div class="chat-panel">
-    <div class='chat-box' ng-repeat="message in home.currentRoomMessages">
-        {{ message.content }}
-    </div>
+<div class="main-panel"> 
+    <div class="side-panel">
+        <div class="side-panel-heading">
+            <h2 class="heading-secondary"> Welcome to Chatty </h2>
+            <h3 class="heading-tertiary"> Get your chat on </h3>
+            <button class="button" ng-click="home.openRoomModal()"> Create a New Room </button>
+        </div>
+        <ul class="room-list">
+            <li class="room-item" ng-repeat="room in home.rooms"> <p> {{ room.$value }}  </li>
+        </ul>
+    </div>  
 </div>
