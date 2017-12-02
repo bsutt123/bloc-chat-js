@@ -18,9 +18,21 @@
 html {
     font-size: 62.5%;
 }
+
+.body{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
 .side-panel-heading{
     text-align: center;
 }
+
+.heading-secondary {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+
 .side-panel {
     position:absolute;
     width: 20%;
