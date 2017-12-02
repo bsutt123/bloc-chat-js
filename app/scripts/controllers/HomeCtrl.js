@@ -2,6 +2,7 @@
     function HomeCtrl(Room, $uibModal, Message) {
         var self = this
         self.rooms = Room.all
+        self.currentRoomName = '';
 
         self.openRoomModal = function() {
 
@@ -22,6 +23,7 @@
 
         self.setActiveRoom = function(room) {
             self.currentRoomMessages = Message.getMessagesByRoom(room.$id);
+            self.currentRoomName = room.$value;
             console.log(self.currentRoomMessages)
 
         };
