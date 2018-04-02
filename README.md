@@ -1,107 +1,26 @@
-## Bloc Frontend Project Starter
+# Chatty - Angular
 
-A starter application for student projects in Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp).
+This is a simple chatting service which is created as a slack like clone that uses Angular and Firebase Realtime Database to implement the frontend and backend respectively
 
-## Pull Down the Code
+## Motivation
 
-Start by cloning the repository:
+Chatty or a chatting service is general is what I use when I want to learn a new front end framework but I want to solve a problem that I already know most of the answers to. Its very interesting to get started with a new framework and see the kind of advantages and disadvantages that they have in comparison to the other frameworks.
 
-```
-$ git clone https://github.com/Bloc/bloc-frontend-project-starter.git <your-frontend-project-name>
-```
-
-## Reset Git
-
-This will be your personal project. So all of the past commit history that we used to build this starter app aren't needed. Also you will want to be able to push/pull code from your personal remote (Github) repository and NOT Bloc's remote (Github) repository.
-
-Remove the existing local Git repository:
-
-```
-$ rm -r -f .git
-```
-
-Initialize a new Git repository, add all of these existing files, and commit them:
-
-```
-$ git init
-$ git add .
-$ git commit -m "initial commit"
-```
-
-Go to Github and create a new repository. Add that new repository as the proper remote. Then push your initial commit.
-
-```
-$ git remote add origin <URL TO NEW GITHUB REPO>
-$ git push origin master
-```
-
-## Configuration
-
-The project uses Node to run a JS server in development. This will be important when we want to use urls /album or /collection instead of the basic album.html or collection.html. It may  help to review [our resource on NPM and `package.json` files](https://www.bloc.io/resources/npm-and-package-json).
-
-Install the project dependencies by running:
-
-```
-$ npm install
-```
-
-## Run the Application
-
-Run the application server:
-
-```
-$ npm start
-```
-
-The server will start up. To stop the server, press `cntrl + c`.
+I made this version of Chatty after the Angular Version but before the version for React or Vue. It was good practice with AngularJS, but it was also a real eye opening experience to see how much better modern frameworks are at creating Single Page Applications, and made me understand why Google decided to make a breaking versioning change when moving from AngularJS to Angular.
 
 
-## Use in Brackets Live Preview
+## Local Installation
 
-To use the application with the Live Preview functionality of the Brackets text editor, go to __File > Project Settings__ and add `http://localhost:3000` to the Base URL field.
-
-![Screenshot of project settings URL in Brackets](https://bloc-global-assets.s3.amazonaws.com/images-frontend/screenshots/bloc-frontend-project-starter/live_preview_project_settings.png)
-
-The text in the application will not update on every keystroke, but changes will automatically push when you save the file.
-
-## Directory Structure
-
-```
-├── LICENSE
-├── README.md
-├── app
-│   ├── assets
-│   │   └── images
-│   │       └── bloc-logo-white.png
-│   ├── pages
-│   │   └── index.html
-│   ├── scripts
-│   │   └── app.js
-│   ├── styles
-│   │   └── style.css
-│   └── templates
-│       └── home.html
-├── package.json
-└── server.js
-```
-
-
-### Assets/Images
-
-Add images to the `app/assets/images` directory. To reference images in HTML, use the path `/assets/images/<image file name>.jpg`. For example, to include the image called `bloc-white-logo.png`, the path for the `src` attribute in the HTML would be:
-
-```html
-<img src="/assets/images/bloc-white-logo.png">
-```
-
-__Note:__ A sample image has been added to `app/images`. To remove the image from the application, run the following command from the root of repo:
+After cloning the repository locally you can get started by just installing the dependencies and then the server
 
 ```bash
-$ rm -f app/assets/images/bloc-white-logo.png
+npm install
+npm start
 ```
 
-To reference any other assets, like the music in Bloc Jams, use the path `assets/<asset-type>/<asset-file-name>`.
+You should be able to navigate to `http:localhost:3000` and see the site.
 
-### Difference between Pages and Templates
+## Future Work
 
-The `templates` directory should hold any HTML files used as templates in Angular states configured by UI Router. All other HTML files belong in the `pages` directory.
+I do not intend to significantly change or add to this project, and as such there is no future work planned and I am not merging pull requests in
+
